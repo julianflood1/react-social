@@ -8,6 +8,7 @@ class SuggestedFriend extends React.Component {
     super(props);
     this.state = {hovered: false};
     this.handleHover = this.handleHover.bind(this);
+    this.addFriend = this.addFriend.bind(this);
   }
 
   handleHover() {
@@ -17,15 +18,21 @@ class SuggestedFriend extends React.Component {
     }
   }
 
+  addFriend() {
+    console.log(this.props);
+    this.props.handleFriendAdd(this.props.individualUser.name);
+  }
+
   render() {
 
     var suggestedFriendStyle = {
-      height: '100px'
+      height: '100px',
+      margin: '10px',
     }
 
     var profileImageStyle = {
       float: 'left',
-      backgroundColor: 'lightblue',
+      backgroundColor: this.props.individualUser.profilePic,
       width: '100px',
       height: '100px',
       marginRight: '15px'
@@ -55,8 +62,8 @@ class SuggestedFriend extends React.Component {
       <div style={suggestedFriendStyle}>
         <div style={profileImageStyle}></div>
         <div style={nameButtonStyle}>
-          <span>Donec eu orci et</span>
-          <button style={buttonStyle} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>Button</button>
+          <span>{this.props.individualUser.name}</span>
+          <button onClick={this.addFriend} style={buttonStyle} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>Button</button>
         </div>
       </div>
     );

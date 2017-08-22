@@ -8,7 +8,7 @@ function Navbar(props){
     }
   return (
     <div style={navbarStyles}>
-      <SearchBar/>
+      <SearchBar search={props.search}/>
       <NavButtons/>
     </div>
   );

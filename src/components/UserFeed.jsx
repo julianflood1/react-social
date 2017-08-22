@@ -6,7 +6,7 @@ function UserFeed(props){
   var feedStyle = {
     width: '32%',
     marginTop: '20px',
-    height: '600px',
+    minHeight: '600px',
     display: 'flex',
     backgroundColor: 'white',
     flexDirection: 'column',
@@ -19,10 +19,10 @@ function UserFeed(props){
 
   return (
       <div style={feedStyle}>
-        <StatusUpdate />
+        <StatusUpdate activeUser={props.activeUser} handleNewStatus={props.handleNewStatus} />
       <div style={feedItemsStyle}>
         {props.postList.map((post,index) =>
-          <FeedItem childPost={post} />
+          <FeedItem childPost={post} key={index} />
         )}
       </div>
       </div>

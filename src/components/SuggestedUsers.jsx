@@ -5,15 +5,21 @@ function SuggestedUsers(props){
   var suggestedUsersStyle = {
     width: '32%',
     height: '600px',
-    background: 'tomato',
+    background: 'white',
     marginTop: '20px',
     padding: '20px',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    border: '2px solid grey'
   }
+
 
   return (
     <div style={suggestedUsersStyle}>
-      <SuggestedFriend />
+    {props.childSuggestedUsers.map((childUser, index) =>
+      <SuggestedFriend individualUser={childUser}
+      key={index}
+      handleFriendAdd={props.handleFriendAdd}/>
+    )}
     </div>
   );
 }
