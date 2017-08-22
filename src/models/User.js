@@ -1,7 +1,9 @@
 class User {
-  constructor(posts, name, profilePic){
-    this.posts = posts;
+  constructor(name, profilePic, bio){
     this.name = name;
     this.profilePic = profilePic;
+    this.bio = bio;
   }
 }
+
+export default User;

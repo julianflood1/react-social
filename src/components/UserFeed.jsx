@@ -21,7 +21,9 @@ function UserFeed(props){
       <div style={feedStyle}>
         <StatusUpdate />
       <div style={feedItemsStyle}>
-        <FeedItem />
+        {props.postList.map((post,index) =>
+          <FeedItem childPost={post} />
+        )}
       </div>
       </div>
   );

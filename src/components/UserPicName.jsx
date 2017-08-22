@@ -5,7 +5,7 @@ function UserPicName(props){
     width: '100px',
     height: '100px',
     borderRadius: '10px',
-    backgroundColor: 'darkblue',
+    backgroundColor: props.user.profilePic,
     border: 'white 2px solid',
     position: 'absolute',
     top: '210px',
@@ -22,7 +22,7 @@ function UserPicName(props){
     <div>
       <div style={photoStyles}>
       </div>
-      <h2 style={name}>Kellie A. Corrigan</h2>
+      <h2 style={name}>{props.user.name}</h2>
     </div>
   );
 }

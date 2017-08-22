@@ -29,7 +29,7 @@ function UserHeader(props){
   return (
     <div style={userHeaderStyles}>
       <div style={darkbox}></div>
-      <UserPicName/>
+      <UserPicName user={props.user} />
       <div style={text}>
         <li style={listStyle}>Tweets</li>
         <li style={listStyle}>Following</li>

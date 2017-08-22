@@ -20,12 +20,14 @@ function FeedItem(props){
     height: '100%'
   }
 
+  console.log(props);
   return (
     <div style={suggestedFriendStyle}>
       <div style={profileImageStyle}></div>
       <div style={contentStyle}>
-        <span>Donec eu orci et</span>
-        <p>Lorem ipsum dolor sit amet, consectueur s adiosdhging elit. Dullam</p>
+        <span>{props.childPost.title}</span>
+        <span>fadsfasdfs</span>
+        <p>{props.childPost.body}</p>
       </div>
     </div>
   );
