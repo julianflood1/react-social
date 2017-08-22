@@ -2,20 +2,20 @@ import React from "react";
 
 function UserPicName(props){
   var photoStyles= {
-    width: '100',
-    height: '100',
+    width: '100px',
+    height: '100px',
     borderRadius: '10px',
     backgroundColor: 'darkblue',
     border: 'white 2px solid',
     position: 'absolute',
-    top: '210',
-    left: '30'
+    top: '210px',
+    left: '30px'
   }
   var name = {
     fontFamily: 'sans-serif',
-    marginLeft: '160',
-    fontSize: '20',
-    marginTop: '0'
+    marginLeft: '160px',
+    fontSize: '20px',
+    marginTop: '0px'
   }
 
   return (

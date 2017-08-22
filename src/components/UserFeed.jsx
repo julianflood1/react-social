@@ -1,24 +1,29 @@
 import React from "react";
+import StatusUpdate from './StatusUpdate';
+import FeedItem from './FeedItem';
 
 function UserFeed(props){
   var feedStyle = {
-    width: '350',
-    height: '600',
+    width: '32%',
+    marginTop: '20px',
+    height: '600px',
     display: 'flex',
-    backgroundColor: 'blue'
+    backgroundColor: 'white',
+    flexDirection: 'column',
+    border: '2px solid grey'
   }
 
-  var flexStyle = {
-    display: 'flex',
-    justifyContent:'center'
+  var feedItemsStyle = {
+    padding: '10px'
   }
 
   return (
-    <div style={flexStyle}>
       <div style={feedStyle}>
-
+        <StatusUpdate />
+      <div style={feedItemsStyle}>
+        <FeedItem />
       </div>
-    </div>
+      </div>
   );
 }
 

@@ -1,21 +1,18 @@
 import React from "react";
 import Navbar from "./Navbar";
-import UserHeader from "./UserHeader";
-import UserInfo from "./UserInfo";
-import UserFeed from "./UserFeed";
+import AppBody from "./AppBody";
 
 function App(props){
   var AppStyle = {
     height: '100%',
     width: '100%',
-    marginTop: '40'
+    marginTop: '40px',
   }
+
   return (
     <div style={AppStyle}>
       <Navbar/>
-      <UserHeader/>
-      <UserInfo/>
-      <UserFeed/>
+      <AppBody />
     </div>
   );
 }
